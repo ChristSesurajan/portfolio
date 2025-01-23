@@ -9,6 +9,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins',Arial,Helvetica,sans-serif;
+    
 }
 
 body{
@@ -22,12 +23,14 @@ h1 {
 
     font-size: 50px;
     font-weight: bold;
-    display: flex;
+   position: relative;
+   bottom: 40px;
     gap: 1px;
 }
 
 h1 span {
     display: inline-block;
+
 }
 #leftlo{
     /* display: none; */
@@ -64,15 +67,20 @@ h1 span {
     }
 #exp{
     position: relative;
-    left: 800px;
+    left: 300px;
+    bottom: 50px;
+    font-size: 20px;
+    padding: 10px;
+  
+
 }
-#lanugu0 , #lanugu1{
-    font-size: 16px;
+#lanugu0 , #lanugu1,#lanugu2,#lanugu3,#lanugu4,#lanugu5,#lanugu6{
+
     color: white;
     
 }
 #heading{
-    font-size: 16px;
+    font-size: 20px;
 }
 .anima{
     animation: bodercl 2s ease-in-out;
@@ -80,8 +88,70 @@ h1 span {
 .animare{
     animation: bodercl 2s reverse ease-in-out ;
 }
+#exp img{
+    width: 70px;
+    display: block;
+    padding-bottom: 10px;
+    position: relative;
+    left: 950px;
+    bottom: 230px;
+    
+}
+#part1{
+   display: none;
+   
+}
+#part2{
+    position: relative;
+   
+}
+#part3{
+    position: relative;
 
+}
+#part4{
+    position: relative;
+ 
+}
+#part5{
+    position: relative;
+    width: 90px;
 
+}
+#part6{
+    position: relative;
+   
+}
+#edu{
+    font-size: 20px;
+    position: fixed;
+    bottom: 100px;
+    left:50px;
+}
+p em{
+    color: white;
+}
+.expr{
+    font-size: 20px;
+    position: fixed;
+    left: 1000px;
+    bottom: 100px;
+}
+a{
+    position: relative;
+    left: 1230px;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+#nav a:hover{
+    transition: 400ms ease-in-out;
+    color: black;
+    text-decoration: underline;
+    letter-spacing: 1px;
+
+}
 @keyframes bodercl
 {
     0%
