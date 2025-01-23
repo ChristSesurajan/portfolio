@@ -95,25 +95,27 @@ z-index: 99999;
     left: 800px;
     z-index: 1;
     }
-
+#about:hover{
+    cursor: pointer;
+}
 
 #logo1{
     position: relative;
     color: white;
     font-size: 50px;
     text-align: center;
-    top:400px;
+    top:300px;
     left: 380px;
 }
 #logo2{
     color: rgb(0, 0, 0);
     font-size: 50px;
     position: relative;
-    bottom: 600px;
+    bottom: 700px;
 }
 
 
-@media (max-width: 391px) {
+@media (max-width: 389px) {
     .panel{
         
         font-size: 20px;
@@ -188,11 +190,10 @@ z-index: 99999;
   }
   
   /* For larger mobile phones */
-  @media (min-width: 390px) {
+  @media (min-width: 390px) and (max-width: 768px)  {
    
     .panel{
-        
-        font-size: 30px;
+        font-size: 25px;
         float: left;
         position: relative;
     } 
@@ -204,7 +205,7 @@ z-index: 99999;
     
     h1 {
     
-        font-size: 70px;
+        font-size: 60px;
         font-weight: bold;
         position: relative;
         left: 120px;
@@ -212,15 +213,15 @@ z-index: 99999;
     body #photorim{
         position: fixed;
         float: right;
-        width: 300px;
-        top:340px;
-        left: 50px;
+        width: 250px;
+        top:250px;
+        left: 60px;
         border: white 9px solid;
         
         }
         #nav{
             position: fixed;
-            top:800px;
+            top:630px;
             left: 50px;
             display: inline-block;
             z-index: -9999;
@@ -292,13 +293,13 @@ z-index: 99999;
         float: right;
         width: 300px;
         top: 150px;
-        left: 500px;
+        left: 450px;
         border: white 9px solid;
         
         }
         #nav{
             position: fixed;
-            top:700px;
+            top:600px;
             left: 290px;
             display: inline-block;
             z-index: -9999;
@@ -362,21 +363,21 @@ z-index: 99999;
         font-size: 70px;
         font-weight: bold;
         position: relative;
-        left: 400px;
+        left: 500px;
     }
     body #photorim{
         position: fixed;
         float: right;
         width: 300px;
         top: 150px;
-        left: 600px;
+        left: 650px;
         border: white 9px solid;
         
         }
         #nav{
             position: fixed;
-            top:700px;
-            left: 350px;
+            top:600px;
+            left: 450px;
             display: inline-block;
             z-index: -9999;
           }
