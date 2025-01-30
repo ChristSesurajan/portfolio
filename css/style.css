@@ -17,7 +17,20 @@ body{
     background-size: cover;   
  
 }
+canvas{ 
+    display: block; 
+    width: 100%;
 
+} 
+#particles-js{ 
+    position:absolute; 
+    width: 100vw; 
+    height: 100vh; 
+    background-image: url(""); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+ 
+}
 .panel{
     position: relative;
     color: rgb(229, 229, 229);

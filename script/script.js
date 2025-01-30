@@ -1,3 +1,8 @@
+particlesJS.load('particles-js', 'script/particle.json', function() {
+      
+      });
+
+
 setTimeout(function() {
         $('#leftlo').hide();
         $('#photorim').show();
@@ -87,7 +92,7 @@ $('#about').on('click',function(e){
        // $('#about').attr('href').value('./about.html');
        setTimeout(function() {
         console.log('Click event triggered');
-       window.location.href = './about.html';
+       window.location.href = './project.html';
        },2700);
 })
 

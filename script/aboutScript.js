@@ -1,4 +1,6 @@
-
+particlesJS.load('particles-js', 'script/particle.json', function() {
+      
+});
 
 for (let i = 0; i <= 6; i++) {
     setTimeout(function () {

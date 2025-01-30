@@ -13,139 +13,50 @@
     
 }
 
-body{
-    background-color: rgb(83, 83, 83);
-    position: fixed;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
     background-size: cover;   
+    background-color: rgb(83, 83, 83);
+  }
+  
+  canvas{ 
+    display: block; 
+    width: 100%;
+
+} 
+#particles-js{ 
+    position:absolute; 
+    width: 100vw; 
+    height: 100vh; 
+    background-image: url(""); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
  
 }
-
 h1 {
 
     font-size: 50px;
     font-weight: bold;
-   position: relative;
-   bottom: 40px;
+    display: flex;
     gap: 1px;
-    z-index: 0;
 }
 
-h1 span {
+span {
     display: inline-block;
+}
 
-}
-#leftlo{
-    /* display: none; */
-    float: left;
-    background-color: black;
-    width: 800px;
-    height: 1000px;
-    z-index: 99999;
-    }
-    #rightlo{
-    
-        background-color: white;
-        width: 800px;
-        height: 1000px;
-        position: relative;
-        left: 800px;
-        z-index: 1;
-        }
-    
-    
-    #logo1{
-        position: relative;
-        color: white;
-        font-size: 50px;
-        text-align: center;
-        top:300px;
-        left: 380px;
-    }
-    #logo2{
-        color: rgb(0, 0, 0);
-        font-size: 50px;
-        position: relative;
-        bottom: 700px;
-    }
-#exp{
-    position: relative;
-    left: 300px;
-    bottom: 50px;
-    font-size: 20px;
-    padding: 10px;
-  
+#nav a{
+   position: relative;
+   left: 1300px;
+   bottom:60px;
+   text-decoration: none;
+   padding: 10px;
 
-}
-#lanugu0 , #lanugu1,#lanugu2,#lanugu3,#lanugu4,#lanugu5,#lanugu6{
-
-    color: white;
-    
-}
-#heading{
-    font-size: 20px;
-}
-.anima{
-    animation: bodercl 2s ease-in-out;
-}
-.animare{
-    animation: bodercl 2s reverse ease-in-out ;
-}
-#exp img{
-    width: 70px;
-    display: block;
-    padding-bottom: 10px;
-    position: relative;
-    left: 950px;
-    bottom: 230px;
-    
-}
-#part1{
-   display: none;
-   
-}
-#part2{
-    position: relative;
-   
-}
-#part3{
-    position: relative;
-
-}
-#part4{
-    position: relative;
- 
-}
-#part5{
-    position: relative;
-    width: 90px;
-
-}
-#part6{
-    position: relative;
-   
-}
-#edu{
-    font-size: 20px;
-    position: fixed;
-    bottom: 100px;
-    left:50px;
-}
-p em{
-    color: white;
-}
-.expr{
-    font-size: 20px;
-    position: fixed;
-    left: 1000px;
-    bottom: 100px;
-}
-a{
-    position: relative;
-    left: 1230px;
-    color: white;
-    padding: 10px;
-    font-size: 20px;
-    text-decoration: none;
+   color: white;
+   font-size: 25px;
 }
 #nav a:hover{
     transition: 400ms ease-in-out;
@@ -154,268 +65,3 @@ a{
     letter-spacing: 1px;
 
 }
-@keyframes bodercl
-{
-    0%
-    {
-        border: none;
-        border-radius: none;
-        background-color: none;
-        padding: 0px;
-    }
-    25%{
-        border: 0.5px solid black;
-        border-radius: 3px;
-        background-color: rgb(82, 82, 82);
-        padding: 2px;
-    }
-    50%{
-        border: 1px solid black;
-        border-radius: 5px;
-        background-color: rgb(52, 52, 52);
-        padding: 2px;
-    }
-    75%{
-        border: 1.5px solid black;
-        border-radius: 7px;
-        background-color: rgb(27, 27, 27);
-        padding: 2px;
-    }
-    
-    100%
-    {
-        border: 2px solid black;
-        border-radius: 9px;
-        background-color: black;
-        padding: 2px;
-    }
-}
-
-
-
-@media (max-width: 389px) {
-    body{
-        width: 100vw;
-        height: 100vh;
-        overflow: visible;
-    }
-    h1 {
-    
-        font-size: 40px;
-        font-weight: bold;
-        position: relative;
-        bottom: 120px;
-        z-index: 0;
-    }
-        
-        a{
-            position: relative;
-            left: 595px;
-            display: inline;
-            z-index: 999999;
-          }
-          #nav a{
-            
-           font-size: 15px;
-           z-index: 999999;
-        }
-        #exp{
-            position: relative;
-            left: 00px;
-            bottom: 50px;
-            font-size: 15px;
-            padding: 10px;
-          
-        
-        }
-        #edu{
-            font-size: 15px;
-            position: fixed;
-            top:600px;
-            left: 10px;
-           
-        }
-        .expr{
-            font-size: 15px;
-            position: fixed;
-            left: 00px;
-            top: 800px;
-        }
-    }
-  
-  /* For larger mobile phones */
-  @media (min-width: 390px) and (max-width: 768px)  {
-   
-    body{
-        width: 100vw;
-        height: 100vh;
-        overflow: auto;
-    }
-    h1 {
-    
-        font-size: 35px;
-        font-weight: bold;
-        position: relative;
-        bottom: 120px;
-        z-index: 0;
-    }
-        
-        a{
-            position: relative;
-            left: 330px;
-            z-index: 999999;
-          }
-          #nav a{
-            display: flex;
-           font-size: 15px;
-           z-index: 999999;
-        }
-        #exp{
-            position: relative;
-            left: 00px;
-            bottom: 50px;
-            font-size: 15px;
-            padding: 10px;
-          
-        
-        }
-        #edu{
-            font-size: 15px;
-            position: fixed;
-            top:600px;
-            left: 10px;
-           
-        }
-        .expr{
-            font-size: 15px;
-            position: fixed;
-            left: 00px;
-            top: 800px;
-        }
-
-  }
-  
-  /* For tablets in portrait mode */
-  @media (min-width: 768px) and (max-width: 1024px) {
-    body{
-        width: 100vw;
-        height: 100vh;
-        overflow: auto;
-    }
-    h1 {
-    
-        font-size: 35px;
-        font-weight: bold;
-        position: relative;
-        bottom: 30px;
-        z-index: 0;
-    }
-        
-        a{
-            position: relative;
-           
-            z-index: 999999;
-            display: block;
-          }
-          #nav a{
-            top: 10px;
-            display: inline;
-           font-size: 15px;
-           z-index: 999999;
-           left: 500px;
-        }
-        #exp{
-            position: relative;
-            left: 00px;
-            bottom: 0px;
-            font-size: 15px;
-            padding: 10px;
-          
-        
-        }
-        #edu{
-            font-size: 15px;
-            position: fixed;
-            top: 450px;
-            left: 10px;
-           
-        }
-        .expr{
-            font-size: 15px;
-            position: fixed;
-            left: 500px;
-            top: 450px;
-        }
-        #exp img{
-            width: 40px;
-            display: block;
-            padding-bottom: 10px;
-            position: relative;
-            left: 600px;
-            bottom: 230px;
-            
-        }
-  }
-  
-  /* For tablets in landscape mode */
-  @media (min-width: 1024px) and (max-width: 1280px) {
-    body{
-        width: 100vw;
-        height: 100vh;
-        overflow: auto;
-    }
-    h1 {
-    
-        font-size:40px;
-        font-weight: bold;
-        position: relative;
-        bottom: 30px;
-        z-index: 0;
-    }
-        
-        a{
-            position: relative;
-           
-            z-index: 999999;
-            display: block;
-          }
-          #nav a{
-            top: 10px;
-            display: inline;
-           font-size: 15px;
-           z-index: 999999;
-           left: 750px;
-        }
-        #exp{
-            position: relative;
-            left: 150px;
-            bottom: 0px;
-            font-size: 15px;
-            padding: 10px;
-          
-        
-        }
-        #edu{
-            font-size: 15px;
-            position: fixed;
-            top: 450px;
-            left: 100px;
-           
-        }
-        .expr{
-            font-size: 15px;
-            position: fixed;
-            left: 700px;
-            top: 450px;
-        }
-        #exp img{
-            width: 45px;
-            display: block;
-            padding-bottom: 10px;
-            position: relative;
-            left: 600px;
-            bottom: 230px;
-            
-        }
-   
-  }

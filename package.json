@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "gsap": "^3.12.5",
+    "particles.js": "^2.0.0",
     "scramble-text": "^0.0.9"
   }
 }
