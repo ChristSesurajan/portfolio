@@ -1,20 +1,33 @@
+gsap.registerPlugin(ScrollTrigger) ;
 particlesJS.load('particles-js', 'script/particle.json', function() {
       
 });
 
-for (let i = 0; i <= 6; i++) {
-    setTimeout(function () {
-        $('#lanugu' + i).addClass('anima'); 
-        $('#lanugu' + i).addClass('animare'); 
-    }, 2000 * (i + 1)); 
-}
 
-for (let i = 0; i <= 6; i++) {
-    setTimeout(function () {
-        $('#lanugu' + i).removeClass('anima');
-        $('#lanugu' + i).removeClass('animare');  
-    }, 2000 * (i + 2)); 
-}
+gsap.fromTo('#gossip',{
+    x:-2000 
+},{
+    scrollTrigger:{
+        trigger:'#gossip',
+        toggleActions:"restart pause  resume reverse"
+    },x:0,duration: 1,ease:"ease"})
+
+gsap.fromTo('#Gazetteer',{
+    x:-2000
+},{scrollTrigger:{
+    trigger:'#Gazetteer',
+    start: '30px 80%',
+    toggleActions:"restart pause resume reverse"
+},
+x:0,duration: 1,ease:"ease"
+})
+gsap.fromTo('#compdir',{
+    x:-2000
+},{    scrollTrigger:{
+    trigger:'#compdir',
+    start: '20px 50%',
+    toggleActions:"restart pause resume reverse"
+},x:0,duration: 1,ease:"ease"},)
 Draggable.create("#cr7",{
     inertia: true, 
     onDragEnd: function () {
@@ -23,30 +36,30 @@ Draggable.create("#cr7",{
             })
           },
 });
-Draggable.create("#edu",{
-    inertia: true, 
-    onDragEnd: function () {
-            gsap.to('#edu',{
-                    x:0,y:0,duration:2,ease:"elastic"
-            })
-          },
-});
-Draggable.create(".expr",{
-    inertia: true, 
-    onDragEnd: function () {
-            gsap.to('.expr',{
-                    x:0,y:0,duration:2,ease:"elastic"
-            })
-          },
-});
-Draggable.create("#exp",{
-    inertia: true, 
-    onDragEnd: function () {
-            gsap.to('#exp',{
-                    x:0,y:0,duration:2,ease:"elastic"
-            })
-          },
-});
+// Draggable.create("#edu",{
+//     inertia: true, 
+//     onDragEnd: function () {
+//             gsap.to('#edu',{
+//                     x:0,y:0,duration:2,ease:"elastic"
+//             })
+//           },
+// });
+// Draggable.create(".expr",{
+//     inertia: true, 
+//     onDragEnd: function () {
+//             gsap.to('.expr',{
+//                     x:0,y:0,duration:2,ease:"elastic"
+//             })
+//           },
+// });
+// Draggable.create("#exp",{
+//     inertia: true, 
+//     onDragEnd: function () {
+//             gsap.to('#exp',{
+//                     x:0,y:0,duration:2,ease:"elastic"
+//             })
+//           },
+// });
 
 
 
@@ -112,39 +125,46 @@ gsap.fromTo('#nav',{
 
 
 $('#gossip').on('mouseover',function(){
-    $('#overpro').show()
+     $('#overpro h4, #overpro p').show()
 
-    $('#gossip img').css({
-        'background-color': '#ffffff',
-        'border': '1px solid black',
-        'opacity': '0.1'
-    })
+    // $('#gossip img').css({
+    //     'background-color': '#ffffff',
+    //     'border': '1px solid black',
+    //     'opacity': '0.1'
+    // })
   
 }).on( "mouseout", function() {
-    $('#overpro').hide()
-    $('#gossip img').css({
-        'background-color': '#ffffff',
-        'border': '1px solid black',
-        'opacity': '1'
-    })
+    $('#overpro h4, #overpro p').hide();
+    // $('#overpro::after').css({
+    //     'content': '',
+    //     'background':'linear-gradient(to right, rgb(152, 11, 246),rgb(255, 255, 255, 0.7))',
+    //     'position': 'absolute',
+    //     'width': '0%',
+    //     'height': '100%',
+    //     'bottom': '0px',
+    //     'border-radius': '5px',
+    //     'left': '0px',
+    //     'transition': '200ms ease-in-out',
+    //     'z-index': -1
+    // })
 })
 
-$('#Gazetteer').on('click',function(){
-    $('#overpro1').show()
+$('#Gazetteer').on('mouseenter',function(){
+    $('#overpro1 h4, #overpro1 p').show()
 
-    $('#Gazetteer img').css({
-        'background-color': '#ffffff',
-        'border': '1px solid black',
-        'opacity': '0.1'
-    })
+    // $('#Gazetteer img').css({
+    //     'background-color': '#ffffff',
+    //     'border': '1px solid black',
+    //     'opacity': '0.1'
+    // })
   
 }).on( "mouseleave", function() {
-    $('#overpro1').hide()
-    $('#Gazetteer img').css({
-        'background-color': '#ffffff',
-        'border': '1px solid black',
-        'opacity': '1'
-    })
+    $('#overpro1 h4, #overpro1 p').hide()
+    // $('#Gazetteer img').css({
+    //     'background-color': '#ffffff',
+    //     'border': '1px solid black',
+    //     'opacity': '1'
+    // })
 })
 $('#Gazetteer').on('mouseover', function() {
     $('#Gazetteer img').attr('src', 'assets/clients/mapv.gif');
@@ -153,28 +173,96 @@ $('#Gazetteer').on('mouseover', function() {
 });
 
 
-$('#compdir').on('click',function(){
-    $('#overpro2').show()
+$('#compdir').on('mouseenter',function(){
+    $('#overpro2 h4, #overpro2 p').show()
 
-    $('#compdir img').css({
-        'transition': '2s ease-in-out',
-        'background-color': '#ffffff',
-        'border': '1px solid black',
-        'opacity': '0.1'
-    })
+    // $('#compdir img').css({
+    //     'transition': '2s ease-in-out',
+    //     'background-color': '#ffffff',
+    //     'border': '1px solid black',
+    //     'opacity': '0.1'
+    // })
 
   
 }).on( "mouseleave", function() {
-    $('#overpro2').hide()
-    $('#compdir img').css({
-        'transition': '2s ease-in-out',
-        'background-color': '#ffffff',
-        'border': '1px solid black',
-        'opacity': '1'
-    })
+    $('#overpro2 h4, #overpro2 p').hide()
+    // $('#compdir img').css({
+    //     'transition': '2s ease-in-out',
+    //     'background-color': '#ffffff',
+    //     'border': '1px solid black',
+    //     'opacity': '1'
+    // })
 })
 $('#compdir').on('mouseover', function() {
     $('#compdir img').attr('src', 'assets/clients/pro2.gif');
 }).on('mouseleave', function() {
     $('#compdir img').attr('src', 'assets/clients/database.png');
 });
+
+$('#gossip').on('mouseover', function() {
+    $('#gossip img').attr('src', '/assets/clients/gossp.gif');
+}).on('mouseleave', function() {
+    $('#gossip img').attr('src', '/assets/clients/gossip.png');
+});
+
+
+
+$("#contact-form").submit(function(e) {
+
+    e.preventDefault();
+    var postdata = $(this).serialize();
+
+    $.ajax({
+
+        type: "POST",
+        url: "/assets/php/contact.php",
+        data: postdata,
+        dataType: "json",
+        success: function(json) {
+
+            $("#contact-form input, #contact-form textarea").removeClass("error");
+
+            setTimeout(function(){
+
+                if (json.nameMessage !== "") {
+
+                    $("#contact-form-name").addClass("error");
+
+                }
+
+                if (json.emailMessage !== "") {
+
+                    $("#contact-form-email").addClass("error");
+
+                }
+
+                if (json.messageMessage !== "") {
+
+                    $("#contact-form-message").addClass("error");
+
+                }
+
+            }, 10);
+
+            if (json.nameMessage === "" && json.emailMessage === "" && json.messageMessage === "") {
+
+                $("#contact-form.error input, #contact-form.error textarea").removeClass("error");
+                $('#contact-form').addClass("success");
+                $('#contact-form textarea, #contact-form input').val("");
+                
+                setTimeout(function(){
+                    
+                    $('#contact-form').removeClass("success");
+                    
+                },4000);
+
+            }
+
+        }
+
+    });
+
+});
+
+
+
