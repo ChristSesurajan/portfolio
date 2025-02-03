@@ -31,7 +31,7 @@ body {
     padding: 0;
     font-family: 'poppins','Arial', sans-serif;
     background-color: rgb(83, 83, 83);
-  
+
   }
   
   canvas{ 
@@ -89,138 +89,6 @@ span {
     letter-spacing: 1px;
 
 }
-/* #proto {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items:center ;
-    gap: 20px;
-}
-
-.card {
-    width: 500px; 
-    border-radius: 10px;
-}
-
-.card-img-top {
-    max-height: 200px; 
-    object-fit: cover;
-}
-
-
-
-#overpro h4,p{
- display: none;
- max-width: fit-content;
- z-index: 0;
-}
-#overpro{
-    position: absolute;
-    max-width: fit-content;
-     z-index: 0;
-}
-#overpro::after{
-    content: '';
-    background:linear-gradient(to right, rgb(0, 240, 180),rgb(255, 255, 255, 0.7));
-    position: absolute;
-    width: 0%;
-   
-    height: 100%;
-    bottom: 0px;
-    border-radius: 5px;
-    left: 0px;
-    transition: 200ms ease-in-out;
-    z-index: -1;
-}
-#overpro:hover::after{
-  width: 100%;  
-}
-
-#overpro a{
-   text-decoration: none;
-   color: black;
-   
-}
-
-#overpro a:hover{
-    text-decoration: underline;
-   
- }
-
- #overpro1 h4,p{
-    display: none;
-    z-index: 1;
-   }
-   #overpro1{
-     display: block;
-     z-index: 0;
-   }
-   #overpro1::after{
-       content: '';
-       background:linear-gradient(to right, rgb(0, 240, 180),rgb(255, 255, 255, 0.7));
-       position: absolute;
-       width: 0%;
-       height: 100%;
-       bottom: 0px;
-       border-radius: 5px;
-       left: 0px;
-       transition: 200ms ease-in-out;
-       z-index: -1;
-   }
-   #overpro1:hover::after{
-     width: 100%;  
-   }
-   
-   #overpro1 a{
-      text-decoration: none;
-      color: black;
-      
-   }
-
-   #overpro1 a:hover{
-       text-decoration: underline;
-      
-    }
-   
-    #overpro2 h4,p{
-        display: none;
-        z-index: 1;
-       }
-       #overpro2{
-        display: flex;
-        flex-direction: column;
-         z-index: 0;
-       }
-       #overpro2::after{
-           content: '';
-           background:linear-gradient(to right, rgb(0, 240, 180),rgb(255, 255, 255, 0.7));
-           position: absolute;
-           width: 0%;
-           height: 100%;
-           bottom: 0px;
-           border-radius: 5px;
-           left: 0px;
-           transition: 200ms ease-in-out;
-           z-index: -1;
-       }
-       #overpro2:hover::after{
-         width: 100%;  
-       }
-       
-       #overpro2 a{
-          text-decoration: none;
-          color: black;
-          
-       }
-       
-       #overpro2 a:hover{
-           text-decoration: underline;
-          
-        }
-        */
-
-
 
         #proto {
             display: flex;
@@ -316,13 +184,158 @@ span {
             color: cyan;
             text-decoration: underline;
         }
-      
-        @media (max-width: 768px) {
+    
+/* Preloader Container */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: 99999;
+}
+
+/* Left & Right Panels */
+#leftlo, #rightlo {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+#leftlo {
+    background-color: black;
+}
+
+#rightlo {
+    background-color: white;
+}
+
+/* Logos */
+#logo1 {
+    position: relative;
+    color: white;
+    font-size: 50px;
+    left: 362px;
+}
+
+#logo2 {
+    color: black;
+    font-size: 50px;
+    position: relative;
+    right: 370px;
+}
+
+
+
+        @media (max-width: 389px) {
+            #nav a{
+                position: relative;
+                left: 220px;
+                bottom:60px;
+                text-decoration: none;
+                padding: 10px;
+                color: white;
+                font-size: 15px;
+             }
+             #overpro h4,p,a{
+                max-height: 10px;
+                font-size: 10px;
+             }
+             #more{
+                font-size: 10px;
+             }
+             #logo1 {
+                position: relative;
+                color: white;
+                font-size: 30px;
+                left: 80px;
+            }
+            
+            #logo2 {
+                color: black;
+                font-size: 30px;
+                position: relative;
+                right: 82px;
+            }
+        }
+
+
+
+
+        @media (min-width: 390px) and (max-width: 768px)  {
+   
             body{
-                overflow: hidden;
+                overflow: auto;
             }
             .card {
                 max-width: 90%;
+            }
+            #nav a{
+                position: relative;
+                left: 220px;
+                bottom:60px;
+                text-decoration: none;
+                padding: 10px;
+                color: white;
+                font-size: 15px;
+             }
+             #overpro h4,p,a{
+                max-height: 10px;
+                font-size: 10px;
+             }
+             #more{
+                font-size: 10px;
+             }
+             #logo1 {
+                position: relative;
+                color: white;
+                font-size: 30px;
+                left: 95px;
+            }
+            
+            #logo2 {
+                color: black;
+                font-size: 30px;
+                position: relative;
+                right: 100px;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            body{
+                overflow: auto;
+            }
+            #nav a{
+                position: relative;
+                left: 620px;
+                bottom:60px;
+                text-decoration: none;
+                padding: 10px;
+                color: white;
+                font-size: 15px;
+             }
+             #overpro h4,p,a{
+                max-height: 30px;
+                font-size: 20px;
+             }
+             #more{
+                font-size: 20px;
+             }
+             #logo1 {
+                position: relative;
+                color: white;
+                font-size: 30px;
+                left: 175px;
+            }
+            
+            #logo2 {
+                color: black;
+                font-size: 30px;
+                position: relative;
+                right: 180px;
             }
         }
         

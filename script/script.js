@@ -55,7 +55,48 @@ Draggable.create("#photorim",{
               },
 });
 
-$('#about').on('click',function(e){
+// $('#about').on('click',function(e){
+//         e.preventDefault();
+//         $('#rightlo').show();
+//         $('#leftlo').show();
+//         gsap.fromTo('#leftlo',{
+//                 x:-900
+//         },
+//         {x:0,duration: 0.8})
+    
+//         gsap.fromTo('#rightlo',{
+//                 x:900
+//         },{x:0,duration: 0.8})
+    
+    
+//         gsap.fromTo('#logo1',{
+//                 x:-500
+//         },{x:0, rotation: 360,duration: 1.5})
+//         gsap.fromTo('#logo2',{
+//                 x:500
+//         },{x:0, rotation: 360, duration: 1.5})
+//         setTimeout(function() {
+                
+//         $('#photorim').hide();
+//             gsap.fromTo('#leftlo',{
+//                 x:0
+//         },
+//         {x:-900,duration: 1})
+    
+//         gsap.fromTo('#rightlo',{
+//                 x:0
+//         },{x:900,duration: 1})
+        
+        
+//         }, 2000)
+//        // $('#about').attr('href').value('./about.html');
+//        setTimeout(function() {
+//         console.log('Click event triggered');
+//        window.location.href = './project.html';
+//        },2700);
+// })
+
+$('#contact').on('click',function(e){
         e.preventDefault();
         $('#rightlo').show();
         $('#leftlo').show();
@@ -92,11 +133,9 @@ $('#about').on('click',function(e){
        // $('#about').attr('href').value('./about.html');
        setTimeout(function() {
         console.log('Click event triggered');
-       window.location.href = './project.html';
+       window.location.href = './contact.html';
        },2700);
 })
-
-
 window.onload = function() {
 
         "use strict";

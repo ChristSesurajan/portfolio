@@ -52,6 +52,7 @@ canvas{
     background-image: url(""); 
     background-repeat: no-repeat; 
     background-size: cover; 
+    z-index: -999999;
  
 }
 footer {
@@ -61,6 +62,7 @@ footer {
     color: white;
     width: 100%;
     bottom: 0;
+    z-index: -999;
 }
 .panel{
     position: relative;
@@ -91,6 +93,7 @@ width: 300px;
 top: 100px;
 left: 1000px;
 border: white 9px solid;
+z-index: -999;
 
 }
 
@@ -137,7 +140,7 @@ z-index: 99999;
     height: 1000px;
     position: relative;
     left: 800px;
-    z-index: 1;
+    z-index: 999999;
     }
 #about:hover{
     cursor: pointer;
@@ -157,7 +160,9 @@ z-index: 99999;
     position: relative;
     bottom: 700px;
 }
-
+#contact:hover{
+    cursor: pointer;
+}
 
 @media (max-width: 389px) {
     .panel{

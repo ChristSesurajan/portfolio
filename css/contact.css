@@ -23,24 +23,23 @@ body {
   
   canvas{ 
     display: block; 
-    width: 100%; 
-    height: 100%;
+    width: 100%;
 
 } 
 #particles-js{ 
-    position: fixed;
-    width: 100vw;
-    height: 100%; /* Extends to the full page height */
-    background-image: url("");
-    background-repeat: no-repeat;
-    background-size: cover;
-  
+    position:absolute; 
+    width: 100vw; 
+    height: 100vh; 
+    background-image: url(""); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    z-index: -999999;
  
 }
 footer {
     text-align: center;
     padding: 10px;
-
+    z-index: -999999;
     color: white;
     width: 100%;
     bottom: 0;
@@ -200,6 +199,15 @@ span {
     
 
 }
+#contact-form input::placeholder  {
+  
+    color: white;
+  }
+
+  #contact-form textarea::placeholder{
+  
+    color: white;
+  }
 
 .social-icon {
     display: flex;
@@ -243,3 +251,149 @@ span {
     background-color: #e68900;
     transform: scale(1.1);
 }
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    z-index: 99999;
+}
+
+/* Left & Right Panels */
+#leftlo, #rightlo {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+#leftlo {
+    background-color: black;
+}
+
+#rightlo {
+    background-color: white;
+}
+
+/* Logos */
+#logo1 {
+    position: relative;
+    color: white;
+    font-size: 50px;
+    left: 362px;
+}
+
+#logo2 {
+    color: black;
+    font-size: 50px;
+    position: relative;
+    right: 370px;
+}
+
+
+
+@media (max-width: 389px) {
+    #nav a{
+        position: relative;
+        left: 220px;
+        bottom:60px;
+        text-decoration: none;
+        padding: 10px;
+        color: white;
+        font-size: 15px;
+     }
+     .social-icons {
+        position: relative;
+        gap: 10px;
+        right: 100px;
+        top: 60px;
+        
+    
+    }
+    #logo1 {
+        position: relative;
+        color: white;
+        font-size: 30px;
+        left: 40px;
+    }
+    
+    #logo2 {
+        color: black;
+        font-size: 30px;
+        position: relative;
+        right: 42px;
+    }
+}
+
+
+
+
+@media (max-width: 768px) {
+    #nav a{
+        position: relative;
+        left: 220px;
+        bottom:60px;
+        text-decoration: none;
+        padding: 10px;
+        color: white;
+        font-size: 15px;
+     }
+     .social-icons {
+        position: relative;
+        gap: 10px;
+        right: 100px;
+        top: 60px;
+        
+    
+    }
+    #logo1 {
+        position: relative;
+        color: white;
+        font-size: 30px;
+        left: 75px;
+    }
+    
+    #logo2 {
+        color: black;
+        font-size: 30px;
+        position: relative;
+        right: 80px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    #nav a{
+        position: relative;
+        left: 600px;
+        bottom:60px;
+        text-decoration: none;
+        padding: 10px;
+        color: white;
+        font-size: 15px;
+     }
+     .social-icons {
+        position: relative;
+        gap: 10px;
+        right: 300px;
+        top: 60px;
+        
+    
+    }
+    #logo1 {
+        position: relative;
+        color: white;
+        font-size: 30px;
+        left: 175px;
+    }
+    
+    #logo2 {
+        color: black;
+        font-size: 30px;
+        position: relative;
+        right: 180px;
+    }
+}
+

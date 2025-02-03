@@ -9,6 +9,7 @@ gsap.fromTo('#gossip',{
 },{
     scrollTrigger:{
         trigger:'#gossip',
+
         toggleActions:"restart pause  resume reverse"
     },x:0,duration: 1,ease:"ease"})
 
@@ -25,7 +26,8 @@ gsap.fromTo('#compdir',{
     x:-2000
 },{    scrollTrigger:{
     trigger:'#compdir',
-    start: '20px 50%',
+    start:'top 600px',
+
     toggleActions:"restart pause resume reverse"
 },x:0,duration: 1,ease:"ease"},)
 Draggable.create("#cr7",{
@@ -206,63 +208,29 @@ $('#gossip').on('mouseover', function() {
 });
 
 
+    window.onload = function () {
+        "use strict";
 
-$("#contact-form").submit(function(e) {
+        // Ensure elements are visible before animation
+        gsap.set("#leftlo, #rightlo", { visibility: "visible" });
+        
+        // Logo animations
+        gsap.fromTo('#logo1',{
+            x:-300
+    },{x:0, rotation: 360,duration: 1.5})
+    gsap.fromTo('#logo2',{
+            x:500
+    },{x:0, rotation: 360, duration: 1.5})
 
-    e.preventDefault();
-    var postdata = $(this).serialize();
+        setTimeout(function () {
+            // Sliding animations for panels
+            gsap.to("#leftlo", { x: -900, duration: 1, ease: "power2.inOut" });
+            gsap.to("#rightlo", { x: 900, duration: 1, ease: "power2.inOut" });
 
-    $.ajax({
+            // Hide preloader after animation
+            setTimeout(() => {
+                document.querySelector(".preloader").style.display = "none";
+            }, 1000);
 
-        type: "POST",
-        url: "/assets/php/contact.php",
-        data: postdata,
-        dataType: "json",
-        success: function(json) {
-
-            $("#contact-form input, #contact-form textarea").removeClass("error");
-
-            setTimeout(function(){
-
-                if (json.nameMessage !== "") {
-
-                    $("#contact-form-name").addClass("error");
-
-                }
-
-                if (json.emailMessage !== "") {
-
-                    $("#contact-form-email").addClass("error");
-
-                }
-
-                if (json.messageMessage !== "") {
-
-                    $("#contact-form-message").addClass("error");
-
-                }
-
-            }, 10);
-
-            if (json.nameMessage === "" && json.emailMessage === "" && json.messageMessage === "") {
-
-                $("#contact-form.error input, #contact-form.error textarea").removeClass("error");
-                $('#contact-form').addClass("success");
-                $('#contact-form textarea, #contact-form input').val("");
-                
-                setTimeout(function(){
-                    
-                    $('#contact-form').removeClass("success");
-                    
-                },4000);
-
-            }
-
-        }
-
-    });
-
-});
-
-
-
+        }, 2000);
+    };
