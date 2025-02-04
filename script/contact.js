@@ -1,5 +1,5 @@
 particlesJS.load('particles-js', 'script/particle.json', function() {
-      
+    console.log('Particles.js loaded!');
 });
 
 
