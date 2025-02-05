@@ -1,35 +1,7 @@
-gsap.registerPlugin(ScrollTrigger) ;
+gsap.registerPlugin(TextPlugin);
 particlesJS.load('particles-js', 'script/particle.json', function() {
       
 });
-
-
-gsap.fromTo('#gossip',{
-    x:-2000 
-},{
-    scrollTrigger:{
-        trigger:'#gossip',
-
-        toggleActions:"restart pause  resume reverse"
-    },x:0,duration: 1,ease:"ease"})
-
-gsap.fromTo('#Gazetteer',{
-    x:-2000
-},{scrollTrigger:{
-    trigger:'#Gazetteer',
-    start: '30px 80%',
-    toggleActions:"restart pause resume reverse"
-},
-x:0,duration: 1,ease:"ease"
-})
-gsap.fromTo('#compdir',{
-    x:-2000
-},{    scrollTrigger:{
-    trigger:'#compdir',
-    start:'top 600px',
-
-    toggleActions:"restart pause resume reverse"
-},x:0,duration: 1,ease:"ease"},)
 Draggable.create("#cr7",{
     inertia: true, 
     onDragEnd: function () {
@@ -38,70 +10,6 @@ Draggable.create("#cr7",{
             })
           },
 });
-// Draggable.create("#edu",{
-//     inertia: true, 
-//     onDragEnd: function () {
-//             gsap.to('#edu',{
-//                     x:0,y:0,duration:2,ease:"elastic"
-//             })
-//           },
-// });
-// Draggable.create(".expr",{
-//     inertia: true, 
-//     onDragEnd: function () {
-//             gsap.to('.expr',{
-//                     x:0,y:0,duration:2,ease:"elastic"
-//             })
-//           },
-// });
-// Draggable.create("#exp",{
-//     inertia: true, 
-//     onDragEnd: function () {
-//             gsap.to('#exp',{
-//                     x:0,y:0,duration:2,ease:"elastic"
-//             })
-//           },
-// });
-
-
-
-// $('#part2').hide();
-// $('#part3').hide();
-// $('#part4').hide();
-// $('#part5').hide();
-// $('#part6').hide();
-// var k=2;
-// setTimeout(function () {
-//     ['part1', 'part2', 'part3', 'part4', 'part5', 'part6'].forEach((img, index) => {
-//       setTimeout(function () {
-//         if(img==='part1'){
-//             $('#part1').show();
-//         }
-//         gsap.fromTo(
-//           '#' + img,
-//           { x: 300 },
-//           {
-//             x: 0,
-//             delay:1,
-//             ease:Elastic,
-//             repeat: 1,
-//             duration: 1.3,
-//             yoyo: true,
-//             onComplete: () => {
-                
-//               $('#' + img).hide(); 
-//               if (img !== 'part6') {
-//                 $('#part' + k).show();
-//                 k++;
-//               }
-//             },
-//           }
-//         );
-//       }, index * 2000); 
-    
-//     });
-//   }, 500); 
-
   gsap.fromTo('#c',{
     y:200
 },{y:0, rotation: 360,duration: 4,ease:"elastic"})
@@ -111,101 +19,11 @@ gsap.fromTo('#r',{
 gsap.fromTo('#sev',{
     y:200
 },{y:0,duration: 4,rotation: 360,ease:"elastic"})
-// gsap.fromTo('#exp',{
-//     y:200
-// },{y:0,duration: 4,ease:"elastic"})
-// gsap.fromTo('#edu',{
-//     y:200
-// },{y:0,duration: 4, rotate:360, ease:"elastic"})
-// gsap.fromTo('.expr',{
-//     y:200
-// },{y:0,duration: 4, rotate:360, ease:"elastic"})
+
 
 gsap.fromTo('#nav',{
     y:200
 },{y:0,duration: 4,  ease:"elastic"})
-
-
-$('#gossip').on('mouseover',function(){
-     $('#overpro h4, #overpro p').show()
-
-    // $('#gossip img').css({
-    //     'background-color': '#ffffff',
-    //     'border': '1px solid black',
-    //     'opacity': '0.1'
-    // })
-  
-}).on( "mouseout", function() {
-    $('#overpro h4, #overpro p').hide();
-    // $('#overpro::after').css({
-    //     'content': '',
-    //     'background':'linear-gradient(to right, rgb(152, 11, 246),rgb(255, 255, 255, 0.7))',
-    //     'position': 'absolute',
-    //     'width': '0%',
-    //     'height': '100%',
-    //     'bottom': '0px',
-    //     'border-radius': '5px',
-    //     'left': '0px',
-    //     'transition': '200ms ease-in-out',
-    //     'z-index': -1
-    // })
-})
-
-$('#Gazetteer').on('mouseenter',function(){
-    $('#overpro1 h4, #overpro1 p').show()
-
-    // $('#Gazetteer img').css({
-    //     'background-color': '#ffffff',
-    //     'border': '1px solid black',
-    //     'opacity': '0.1'
-    // })
-  
-}).on( "mouseleave", function() {
-    $('#overpro1 h4, #overpro1 p').hide()
-    // $('#Gazetteer img').css({
-    //     'background-color': '#ffffff',
-    //     'border': '1px solid black',
-    //     'opacity': '1'
-    // })
-})
-$('#Gazetteer').on('mouseover', function() {
-    $('#Gazetteer img').attr('src', 'assets/clients/mapv.gif');
-}).on('mouseleave', function() {
-    $('#Gazetteer img').attr('src', 'assets/clients/map.png');
-});
-
-
-$('#compdir').on('mouseenter',function(){
-    $('#overpro2 h4, #overpro2 p').show()
-
-    // $('#compdir img').css({
-    //     'transition': '2s ease-in-out',
-    //     'background-color': '#ffffff',
-    //     'border': '1px solid black',
-    //     'opacity': '0.1'
-    // })
-
-  
-}).on( "mouseleave", function() {
-    $('#overpro2 h4, #overpro2 p').hide()
-    // $('#compdir img').css({
-    //     'transition': '2s ease-in-out',
-    //     'background-color': '#ffffff',
-    //     'border': '1px solid black',
-    //     'opacity': '1'
-    // })
-})
-$('#compdir').on('mouseover', function() {
-    $('#compdir img').attr('src', 'assets/clients/pro2.gif');
-}).on('mouseleave', function() {
-    $('#compdir img').attr('src', 'assets/clients/database.png');
-});
-
-$('#gossip').on('mouseover', function() {
-    $('#gossip img').attr('src', '/assets/clients/gossp.gif');
-}).on('mouseleave', function() {
-    $('#gossip img').attr('src', '/assets/clients/gossip.png');
-});
 
 
     window.onload = function () {
@@ -234,22 +52,43 @@ $('#gossip').on('mouseover', function() {
 
         }, 2000);
     };
-    gsap.to("#scrollArrow", {
-        y: 10,
-        repeat: -1,
-        yoyo: true,
-        duration: 0.8,
-        ease: "power1.inOut"
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-        let arrow = document.getElementById("scrollArrow");
-    
-        window.addEventListener("scroll", function () {
-            if (window.scrollY > 10000) { // Hides when user scrolls past 50px
-                arrow.classList.add("hidden");
-            } else {
-                arrow.classList.remove("hidden");
-            }
-        });
-    });
-        
+    // setTimeout(() => {
+    //     gsap.fromTo("#intro-paragraph", {
+    //         text: { value: "" }
+    //       }, {
+    //         text: { value: "Hey! You must be wondering why CR7? If you're a sports person, you already know why. For others, I'm a huge Cristiano Ronaldo and Thala Dhoni fan. Both of them share one thing in common, the number 7! Why them in particular? I wanted to develop my character by learning from them. From Dhoni, I learned how to stay calm and think under pressure. From CR7, I learned that hard work and passion can achieve anything. And of course, he does the best celebration in the world... SUIIIIIIIII! I’ve always wanted to be a developer. Ever since my 12th grade in computer science, I knew this was my dream. My mind constantly craves creativity, give it some time to think, and it might just surprise you! Jokes aside, creativity helps me build cool frontend designs and solve problems in unique ways. Now, let’s skip to the Main part. I have completed my Master’s at University of Greenwich and earned a solid certification from IT Career Switch. Currently, I'm looking for jobs in and around London, so, if you got one, then I am your guy! You can ping me on the Contact Page. Oh, and the other   details? You’ll find them in my resume there as well. Tricked you into going to the next page!" },
+    //         duration: 15, // Adjust duration for speed
+    //         ease: "power2.out"
+    //       });
+    // }, 2000);
+
+
+
+   
+ // Create GSAP Timeline
+// Create GSAP Timeline
+let tl = gsap.timeline({ repeat: -1 }); // Infinite loop
+
+tl.fromTo('#p1', { x: 800 }, { x: 0, duration: 2, ease: "power2.inOut" })
+  .to('#p1', { x: 800, duration: 2, ease: "power2.inOut" }) // Move out before p2 appears
+
+  .fromTo('#p2', { x: 800 }, { x: 0, duration: 2, ease: "power2.inOut" })
+  .to('#p2', { x: 800, duration: 2, ease: "power2.inOut" }) // Move out before p2 appears
+
+  .fromTo('#p3', { x: 800 }, { x: 0, duration: 2, ease: "power2.inOut" })
+  .to('#p3', { x: 800, duration: 2, ease: "power2.inOut" }) // Move out before p2 appears
+
+  .fromTo('#p4', { x: 800 }, { x: 0, duration: 2, ease: "power2.inOut" })
+  .to('#p4', { x: 800, duration: 2, ease: "power2.inOut" }) // Move out before p2 appears
+
+
+
+
+    //   gsap.to(".image-slider img", {
+    //     x: "100%", 
+    //     duration: 6, 
+    //     repeat: -1, 
+    //     yoyo: true, 
+    //     stagger: 1,
+    //     ease: "power2.inOut"
+    //   });

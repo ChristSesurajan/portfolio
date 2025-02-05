@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap');
+
 .poppins-medium {
     font-family: "Poppins", serif;
     font-weight: 500;
@@ -8,7 +10,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',Arial,Helvetica,sans-serif;
+    font-family: 'Lexend', sans-serif;
 }
 ::-webkit-scrollbar {
     width: 5px;
@@ -35,7 +37,7 @@
 
 body{
     background-color: rgb(83, 83, 83);
-    font-family: 'poppins','Arial', sans-serif;
+    font-family: 'Lexend', sans-serif;
     position: fixed;
     background-size: cover;   
  
@@ -115,7 +117,7 @@ z-index: -999;
 #nav{
   position: relative;
   top:300px;
-  left: 650px;
+  left: 590px;
 }
 
 #nav a:hover{
@@ -240,7 +242,7 @@ z-index: 99999;
   
   /* For larger mobile phones */
   @media (min-width: 390px) and (max-width: 768px)  {
-   
+
     .panel{
         font-size: 25px;
         float: left;
@@ -270,7 +272,7 @@ z-index: 99999;
         }
         #nav{
             position: fixed;
-            top:630px;
+            top:620px;
             left: 50px;
             display: inline-block;
             z-index: -9999;

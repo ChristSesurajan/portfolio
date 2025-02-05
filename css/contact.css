@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap');
 
 .poppins-medium {
     font-family: "Poppins", serif;
@@ -10,9 +11,9 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'poppins','Arial', sans-serif;
+    font-family: 'Lexend', sans-serif;
     background-color: rgb(83, 83, 83);
-    overflow: hidden;
+  overflow: hidden;
   
   }
   
@@ -24,10 +25,11 @@ body {
 #particles-js{ 
     position: absolute;
     width: 100vw;
-    height: 100%; /* Extends to the full page height */
+    height: 100vh; /* Extends to the full page height */
     background-image: url("");
     background-repeat: no-repeat;
     background-size: cover;
+    z-index: -9999;
 
  
 }
@@ -46,7 +48,6 @@ h1 {
     color: black;
     font-size: 50px;
     font-weight: bold;
-    display: flex;
     gap: 1px;
 }
 
@@ -56,7 +57,7 @@ span {
 
 #nav a{
    position: relative;
-   left: 1300px;
+   left: 1200px;
    bottom:60px;
    text-decoration: none;
    padding: 10px;
@@ -167,31 +168,14 @@ span {
             color: rgba(255, 255, 255, 0.6);
         }
         
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            #contact {
-                width: 100%;
-                padding: 20px;
-            }
-        
-            #contact-form input,
-            #contact-form textarea {
-                font-size: 1rem;
-                padding: 10px;
-            }
-        
-            #contact-form button {
-                font-size: 1rem;
-            }
-        }
         /* Social Icons */
 .social-icons {
     display: flex;
     flex-direction: row;
     position: relative;
     gap: 10px;
-    right: 610px;
-    top: 60px;
+    left: 665px;
+    top: 30px;
     
 
 }
@@ -293,23 +277,34 @@ span {
 
 
 @media (max-width: 389px) {
-    #nav a{
-        position: relative;
-        left: 220px;
-        bottom:60px;
-        text-decoration: none;
-        padding: 10px;
-        color: white;
-        font-size: 15px;
-     }
-     .social-icons {
-        position: relative;
-        gap: 10px;
-        right: 100px;
-        top: 60px;
-        
-    
+    body{
+        overflow: hidden;
     }
+    #nav a{
+      display: block;
+      overflow: hidden;
+    
+     }
+     #contact {
+        position: relative;
+        bottom: 100px;
+        overflow: hidden;
+    }
+     #particles-js{
+        height: 100%;
+        overflow: hidden;
+     }
+     .social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       position: relative;
+       left: 199px;
+       bottom: 190px;
+       overflow: hidden;
+
+    }
+  
     #logo1 {
         position: relative;
         color: white;
@@ -323,6 +318,12 @@ span {
         position: relative;
         right: 42px;
     }
+    footer{
+        position: relative;
+        bottom: 150px;
+        overflow: hidden;
+
+    }
 }
 
 
@@ -331,7 +332,7 @@ span {
 @media (max-width: 768px) {
     #nav a{
         position: relative;
-        left: 220px;
+        left: 200px;
         bottom:60px;
         text-decoration: none;
         padding: 10px;
@@ -341,7 +342,7 @@ span {
      .social-icons {
         position: relative;
         gap: 10px;
-        right: 100px;
+        left: 120px;
         top: 60px;
         
     
@@ -359,11 +360,32 @@ span {
         position: relative;
         right: 80px;
     }
+    #contact {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #contact-form input,
+    #contact-form textarea {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    #contact-form button {
+        font-size: 1rem;
+    }
+    footer{
+        position: relative;
+        top:50px;
+    }
 }
 @media (min-width: 768px) and (max-width: 1024px) {
+    body{
+        overflow: hidden;
+    }
     #nav a{
         position: relative;
-        left: 600px;
+        left: 550px;
         bottom:60px;
         text-decoration: none;
         padding: 10px;
@@ -373,7 +395,7 @@ span {
      .social-icons {
         position: relative;
         gap: 10px;
-        right: 300px;
+        left: 290px;
         top: 60px;
         
     
@@ -391,5 +413,6 @@ span {
         position: relative;
         right: 180px;
     }
+
 }
 

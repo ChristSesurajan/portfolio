@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap');
 .poppins-medium {
     font-family: "Poppins", serif;
     font-weight: 500;
@@ -29,7 +30,7 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'poppins','Arial', sans-serif;
+    font-family: 'Lexend', sans-serif;
     background-color: rgb(83, 83, 83);
 
   }
@@ -104,7 +105,7 @@ span {
 
 #nav a{
    position: relative;
-   left: 1300px;
+   left: 1200px;
    bottom:60px;
    text-decoration: none;
    padding: 10px;
@@ -264,7 +265,7 @@ span {
         @media (max-width: 389px) {
             #nav a{
                 position: relative;
-                left: 220px;
+                left: 150px;
                 bottom:60px;
                 text-decoration: none;
                 padding: 10px;
@@ -298,15 +299,13 @@ span {
 
         @media (min-width: 390px) and (max-width: 768px)  {
    
-            body{
-                overflow: auto;
-            }
-            .card {
-                max-width: 90%;
-            }
+         body{
+            overflow-y: scroll;
+         }
+           
             #nav a{
                 position: relative;
-                left: 220px;
+                left: 180px;
                 bottom:60px;
                 text-decoration: none;
                 padding: 10px;
@@ -324,23 +323,29 @@ span {
                 position: relative;
                 color: white;
                 font-size: 30px;
-                left: 95px;
+                left: 85px;
+                bottom: 60px;
             }
             
             #logo2 {
                 color: black;
                 font-size: 30px;
                 position: relative;
-                right: 100px;
+                right: 90px;
+                bottom: 60px;
+               
             }
         }
         @media (min-width: 768px) and (max-width: 1024px) {
             body{
                 overflow: auto;
             }
+            .card {
+                max-width: 90%;
+            }
             #nav a{
                 position: relative;
-                left: 620px;
+                left: 520px;
                 bottom:60px;
                 text-decoration: none;
                 padding: 10px;
@@ -367,5 +372,9 @@ span {
                 position: relative;
                 right: 180px;
             }
+          #compdir{
+            display: block;
+          }
+
         }
         
