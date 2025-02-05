@@ -1,4 +1,5 @@
 gsap.registerPlugin(TextPlugin);
+gsap.registerPlugin(ScrollTrigger) ;
 particlesJS.load('particles-js', 'script/particle.json', function() {
       
 });
@@ -67,20 +68,63 @@ gsap.fromTo('#nav',{
    
  // Create GSAP Timeline
 // Create GSAP Timeline
-let tl = gsap.timeline({ repeat: -1 }); // Infinite loop
+// let tl = gsap.timeline({ repeat: -1 }); // Infinite loop
 
-tl.fromTo('#p1', { x: 800 }, { x: 0, duration: 2, ease: "power2.inOut" })
-  .to('#p1', { x: 800, duration: 2, ease: "power2.inOut" }) // Move out before p2 appears
+// tl.fromTo('#p1', { x: 800 }, { x: 0, duration: 2, ease: "power2.inOut" })
+//   .to('#p1', { x: 800, duration: 2, ease: "power2.inOut" }) // Move out before p2 appears
 
-  .fromTo('#p2', { x: 800 }, { x: 0, duration: 2, ease: "power2.inOut" })
-  .to('#p2', { x: 800, duration: 2, ease: "power2.inOut" }) // Move out before p2 appears
+//   .fromTo('#p2', { x: 800 }, { x: 0, duration: 2, ease: "power2.inOut" })
+//   .to('#p2', { x: 800, duration: 2, ease: "power2.inOut" }) // Move out before p2 appears
 
-  .fromTo('#p3', { x: 800 }, { x: 0, duration: 2, ease: "power2.inOut" })
-  .to('#p3', { x: 800, duration: 2, ease: "power2.inOut" }) // Move out before p2 appears
+//   .fromTo('#p3', { x: 800 }, { x: 0, duration: 2, ease: "power2.inOut" })
+//   .to('#p3', { x: 800, duration: 2, ease: "power2.inOut" }) // Move out before p2 appears
 
-  .fromTo('#p4', { x: 800 }, { x: 0, duration: 2, ease: "power2.inOut" })
-  .to('#p4', { x: 800, duration: 2, ease: "power2.inOut" }) // Move out before p2 appears
+//   .fromTo('#p4', { x: 800 }, { x: 0, duration: 2, ease: "power2.inOut" })
+//   .to('#p4', { x: 800, duration: 2, ease: "power2.inOut" }) // Move out before p2 appears
 
+$('#p1con').hide()
+
+setTimeout(() => { 
+    $('#p1con').show()
+    $('#p1').show()
+    let tl = gsap.timeline({ repeat: -1 }); // Infinite loop
+
+    tl.fromTo('#i1', { x: 1000 }, { x: 0, duration: 2, ease: "power2.inOut" })
+     .to('#i1', { x: 1000, duration: 2, ease: "power2.inOut" }) // Move out before p2 appears
+    
+      .fromTo('#i2', { x: 1000 }, { x: 0, duration: 2, ease: "power2.inOut" })
+     .to('#i2', { x: 1000, duration: 2, ease: "power2.inOut" }) // Move out before p2 appears
+    
+     .fromTo('#i3', { x: 1000 }, { x: 0, duration: 2, ease: "power2.inOut" })
+      .to('#i3', { x: 1000, duration: 2, ease: "power2.inOut" }) // Move out before p2 appears
+    
+        // GSAP Animation - Falling Cinematic Effect
+        gsap.fromTo('#p1', { x: -1000 }, { x: 0, duration: 2.5, ease: "power2.inOut" })
+      
+
+},2700)
+gsap.fromTo('#p2',{
+    x:1000
+},{scrollTrigger:{
+    trigger:'#p2',
+    start: '300px 50%',
+    toggleActions:"restart pause resume reverse"
+},
+x:0,duration: 1,ease:"ease"
+})
+
+
+
+let t2 = gsap.timeline({ repeat: -1 });
+
+// Animate #i4
+t2.fromTo('#i4', { x: -1000 }, {scrollTrigger:{
+    trigger:'#i4',
+    start: '300px 50%',
+    toggleActions:"restart pause resume reverse"
+},x: 0, duration: 2, ease: "power2.inOut" })
+.to('#i4', { x: -1000, duration: 3, ease: "power2.inOut" })
+   
 
 
 
