@@ -108,23 +108,59 @@ gsap.fromTo('#p2',{
 },{scrollTrigger:{
     trigger:'#p2',
     start: '300px 50%',
-    toggleActions:"restart pause resume reverse"
+    toggleActions:"restart none none reverse"
 },
 x:0,duration: 1,ease:"ease"
 })
 
 
 
-let t2 = gsap.timeline({ repeat: -1 });
 
 // Animate #i4
-t2.fromTo('#i4', { x: -1000 }, {scrollTrigger:{
+gsap.fromTo('#i4',{
+    x:-1000
+},{scrollTrigger:{
     trigger:'#i4',
     start: '300px 50%',
-    toggleActions:"restart pause resume reverse"
-},x: 0, duration: 2, ease: "power2.inOut" })
-.to('#i4', { x: -1000, duration: 3, ease: "power2.inOut" })
-   
+    toggleActions:"restart none none reverse",
+    
+},
+x:0,duration: 1,ease:"ease"
+})
+
+gsap.fromTo('#p3',{
+    x:1000
+},{scrollTrigger:{
+    trigger:'#p3',
+    start: '300px 50%',
+    toggleActions:"restart none none reverse"
+},
+x:0,duration: 1,ease:"ease"
+})
+
+gsap.fromTo('#i6',{
+    x:1000
+},{scrollTrigger:{
+    trigger:'#i6',
+    start: '300px 50%',
+    toggleActions:"restart none none reverse"
+},
+x:0,duration: 1,ease:"ease"
+})
+
+
+// Animate #i4
+gsap.fromTo('#i5',{
+    x:-1000
+},{scrollTrigger:{
+    trigger:'#i5',
+    start: '300px 50%',
+    toggleActions:"restart none none reverse",
+    
+},
+x:0,duration: 1,ease:"ease"
+})
+
 
 
 

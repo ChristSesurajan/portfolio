@@ -127,6 +127,9 @@ z-index: -999;
     letter-spacing: 1px;
 
 }
+#preloader{
+    z-index: 99999;
+}
 #leftlo{
 /* display: none; */
 float: left;
